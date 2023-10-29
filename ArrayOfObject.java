@@ -1,49 +1,88 @@
-class Employee{
-    String name;
-    String dept;
-    String relg;
-    int nin;
-    String course;
+class Employee {
+    private String name;
+    private String dept;
+    private String relg;
+    private int nin;
+    private String course;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
+    public String getRelg() {
+        return relg;
+    }
+
+    public int getNin() {
+        return nin;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setName(String newName) {
+        name = newName;
+    }
+
+    public void setDept(String newDept) {
+        dept = newDept;
+    }
+
+    public void setRelg(String newRelg) {
+        relg = newRelg;
+    }
+
+    public void setNin(int newNin) {
+        nin = newNin;
+    }
+
+    public void setCourse(String newCourse) {
+        course = newCourse;
+    }
 }
 
-class ObjArray{
-    public static void main(String[] args){
+class ObjArray {
+    public static void main(String[] args) {
         Employee e1 = new Employee();
         Employee e2 = new Employee();
         Employee e3 = new Employee();
         Employee e4 = new Employee();
         Employee e5 = new Employee();
-    
-        e1.name = "John";
-        e1.dept = "HR";
-        e1.relg = "Christian";
-        e1.nin = 419;
-        e1.course = "Engineering";
 
-        e2.name = "Joshua";
-        e2.dept = "Admin";
-        e2.relg = "Christian";
-        e2.nin = 312;
-        e2.course = "Business Admin";
+        e1.setName("John");
+        e1.setDept("HR");
+        e1.setRelg("Christian");
+        e1.setNin(419);
+        e1.setCourse("Engineering");
 
-        e3.name = "Halimat";
-        e3.dept = "Accounts";
-        e3.relg = "Muslim";
-        e3.nin = 411;
-        e3.course = "Accounting";
+        e2.setName("Joshua");
+        e2.setDept("Admin");
+        e2.setRelg("Christian");
+        e2.setNin(312);
+        e2.setCourse("Business Admin");
 
-        e4.name = "Charles";
-        e4.dept = "IT";
-        e4.relg = "Christian";
-        e4.nin = 666;
-        e4.course = "Computer Science";
+        e3.setName("Halimat");
+        e3.setDept("Accounts");
+        e3.setRelg("Muslim");
+        e3.setNin(411);
+        e3.setCourse("Accounting");
 
-        e5.name = "Sola";
-        e5.dept = "Welfare";
-        e5.relg = "Muslim";
-        e5.nin = 444;
-        e5.course = "Hospitality";
+        e4.setName("Charles");
+        e4.setDept("IT");
+        e4.setRelg("Christian");
+        e4.setNin(666);
+        e4.setCourse("Computer Science");
 
+        e5.setName("Sola");
+        e5.setDept("Welfare");
+        e5.setRelg("Muslim");
+        e5.setNin(449);
+        e5.setCourse("Hospitality");
 
         Employee emp[] = new Employee[5];
         emp[0] = e1;
@@ -52,8 +91,12 @@ class ObjArray{
         emp[3] = e4;
         emp[4] = e5;
 
-        for(Employee i : emp){
-            System.out.println("Employee Details --- Name: " +i.name+ "     Department: " +i.dept+ "     Religion: " +i.relg+ "     NIN: " +i.nin+ "     Course of Study: " +i.course);
+        for (Employee i : emp) {
+            System.out.println("Employee Details --- Name: " + i.getName() +
+                    "     Department: " + i.getDept() +
+                    "     Religion: " + i.getRelg() +
+                    "     NIN: " + i.getNin() +
+                    "     Course of Study: " + i.getCourse());
         }
     }
 }
